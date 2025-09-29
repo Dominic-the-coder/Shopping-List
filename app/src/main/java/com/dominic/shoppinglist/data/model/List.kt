@@ -1,6 +1,6 @@
 package com.dominic.shoppinglist.data.model
 
-class Shopping (
+class List (
     val id: Int? = null,
     val name: String,
     val desc: String,
