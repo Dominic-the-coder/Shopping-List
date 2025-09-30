@@ -6,7 +6,11 @@ class ListsRepo private constructor(){
     val map = mutableMapOf<Int, List>()
     var counter = 0
 
-    fun add(list: List) {
+    init {
+        generateRandomList(10)
+    }
+
+    fun addList(list: List) {
         counter++
         map[counter] = list.copy(id = counter)
     }
@@ -23,6 +27,16 @@ class ListsRepo private constructor(){
 
     fun updateList(id: Int, list: List) {
         map[id] = list
+    }
+
+    fun generateRandomList(n: Int) {
+        repeat(n) {
+            val list = List(
+                name = "Name $it",
+                desc = " Description $it"
+            )
+            addList(list)
+        }
     }
 
     companion object {
