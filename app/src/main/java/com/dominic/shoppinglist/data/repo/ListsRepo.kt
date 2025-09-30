@@ -2,7 +2,7 @@ package com.dominic.shoppinglist.data.repo
 
 import com.dominic.shoppinglist.data.model.List
 
-class ListRepo private constructor(){
+class ListsRepo private constructor(){
     val map = mutableMapOf<Int, List>()
     var counter = 0
 
@@ -26,11 +26,11 @@ class ListRepo private constructor(){
     }
 
     companion object {
-        private var instance: ListRepo? = null
+        private var instance: ListsRepo? = null
 
-        fun getInstance(): ListRepo {
+        fun getInstance(): ListsRepo {
             if (instance == null) {
-                instance = ListRepo()
+                instance = ListsRepo()
             }
             return instance!!
         }
