@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">ShoppingList</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod risus et urna tincidunt imperdiet. Nunc ultrices sapien ante, sed tempus arcu tristique in. Maecenas tempor pharetra enim, non maximus libero efficitur sed. Quisque et ultrices mi, at venenatis justo. Aliquam erat volutpat. Nulla bibendum, velit ac consequat mollis, urna leo tempus dui, et gravida diam odio vitae metus. Sed placerat scelerisque felis, ut dapibus massa aliquam a. Sed neque felis, molestie at lectus et, dignissim semper massa. Vivamus dignissim nunc ut ullamcorper pellentesque. Fusce euismod nibh tortor, vitae congue enim malesuada sed. Praesent interdum tempor viverra. Phasellus quam nisi, ultricies nec tellus non, rhoncus eleifend tortor.</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="quantity">Quantity</string>
+    <string name="show_quantity">Quantity: %1$s</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="add_list">Add List</string>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="sort_order">Sort Order</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+    <string name="sort_by">Sort By</string>
+    <string name="date">Date</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="done">Done</string>
+    <string name="new_lists">New Lists</string>
+    <string name="checkout_Lists">Checkout Lists</string>
+
+    <string name="description_of_list">Description of lists…</string>
+    <string name="quantity_of_item">1x…</string>
+
+    <string name="home_empty">You have no new Lists.</string>
+    <string name="no_name">Name cannot be blank.</string>
+    <string name="no_desc">Description cannot be blank.</string>
+    <string name="error">An error has occurred.</string>
+
+    <string name="delete_confirm">You want to delete this word? \nAction can not be undone.</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="to_complete_question">Do you want to move the word to Complete List?</string>
+    <string name="to_new_question">Do you want to move the word back to New Word List?</string>
 </resources>
