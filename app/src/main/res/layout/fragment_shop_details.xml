@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.general.ShopDetailsFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mtManage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:titleTextColor="@color/white"
+        app:title="List Details"
+        app:titleCentered="true">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetTop="@dimen/xxl"
+            android:insetBottom="@dimen/xxl"
+            android:paddingHorizontal="@dimen/xxxxxl"
+            android:text="@string/done"
+            app:backgroundTint="@color/teal"
+            app:cornerRadius="@dimen/xs" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/xl"
+            android:insetTop="@dimen/xxl"
+            android:insetBottom="@dimen/xxl"
+            android:paddingHorizontal="@dimen/xxxxxl"
+            android:text="@string/update"
+            app:backgroundTint="@color/teal"
+            app:cornerRadius="@dimen/xs" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetTop="@dimen/xxl"
+            android:insetBottom="@dimen/xxl"
+            android:paddingHorizontal="@dimen/xxxxxl"
+            android:text="@string/delete"
+            app:backgroundTint="@color/red"
+            app:cornerRadius="@dimen/xs" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/xxl">
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/TextAppearance.Material3.TitleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xl"
+                android:hint="@string/name" />
+
+            <TextView
+                style="@style/TextAppearance.Material3.TitleMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxxs"
+                android:hint="@string/description" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xl"
+                android:hint="@string/description_of_list" />
+
+            <TextView
+                style="@style/TextAppearance.Material3.TitleMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxxs"
+                android:hint="@string/quantity" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xl"
+                android:hint="@string/quantity_of_item" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
