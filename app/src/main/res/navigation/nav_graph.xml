@@ -41,7 +41,10 @@
         android:id="@+id/editShopFragment"
         android:name="com.dominic.shoppinglist.ui.manage.EditShopFragment"
         android:label="EditShopFragment"
-        tools:layout="@layout/manage_item_layout"/>
+        tools:layout="@layout/manage_item_layout">
+        <argument android:name="shopId" app:argType="integer" />
+    </fragment>
+
     <fragment
         android:id="@+id/addShopFragment"
         android:name="com.dominic.shoppinglist.ui.manage.AddShopFragment"
