@@ -11,10 +11,18 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_shopDetailsFragment2"
-            app:destination="@id/shopDetailsFragment2" />
+            app:destination="@id/shopDetailsFragment2"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
         <action
             android:id="@+id/action_homeFragment_to_addShopFragment"
-            app:destination="@id/addShopFragment" />
+            app:destination="@id/addShopFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/shopDetailsFragment2"
@@ -23,7 +31,11 @@
         tools:layout="@layout/fragment_shop_details" >
         <action
             android:id="@+id/action_shopDetailsFragment2_to_editShopFragment"
-            app:destination="@id/editShopFragment" />
+            app:destination="@id/editShopFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
     <fragment
         android:id="@+id/editShopFragment"
@@ -42,9 +54,17 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_completeShopFragment2_to_shopDetailsFragment2"
-            app:destination="@id/shopDetailsFragment2" />
+            app:destination="@id/shopDetailsFragment2"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
         <action
             android:id="@+id/action_completeShopFragment2_to_addShopFragment"
-            app:destination="@id/addShopFragment" />
+            app:destination="@id/addShopFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
 </navigation>
