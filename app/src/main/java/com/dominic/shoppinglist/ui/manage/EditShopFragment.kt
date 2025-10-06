@@ -6,10 +6,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.dominic.shoppinglist.R
 import com.dominic.shoppinglist.data.model.Shop
+import com.dominic.shoppinglist.ui.general.ShopDetailsFragmentArgs
+
 class EditShopFragment : BaseManageFragment() {
 
     override val viewModel: EditShopViewModel by viewModels()
-    private val args: ShopDetailFragmentArgs by navArgs()
+    private val args: ShopDetailsFragmentArgs by navArgs()
     private lateinit var shop: Shop
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
