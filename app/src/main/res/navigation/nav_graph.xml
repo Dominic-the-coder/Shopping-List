@@ -1,73 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.dominic.shoppinglist.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_shopDetailsFragment2"
-            app:destination="@id/shopDetailsFragment2"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"/>
-        <action
             android:id="@+id/action_homeFragment_to_addShopFragment"
-            app:destination="@id/addShopFragment"
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"/>
-    </fragment>
-    <fragment
-        android:id="@+id/shopDetailsFragment2"
-        android:name="com.dominic.shoppinglist.ui.general.ShopDetailsFragment"
-        android:label="fragment_shop_details"
-        tools:layout="@layout/fragment_shop_details" >
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/addShopFragment" />
         <action
-            android:id="@+id/action_shopDetailsFragment2_to_editShopFragment"
-            app:destination="@id/editShopFragment"
+            android:id="@+id/action_homeFragment_to_shopDetailsFragment"
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"/>
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/shopDetailsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/editShopFragment"
-        android:name="com.dominic.shoppinglist.ui.manage.EditShopFragment"
-        android:label="EditShopFragment"
-        tools:layout="@layout/manage_item_layout">
-        <argument android:name="shopId" app:argType="integer" />
-    </fragment>
-
     <fragment
         android:id="@+id/addShopFragment"
         android:name="com.dominic.shoppinglist.ui.manage.AddShopFragment"
         android:label="AddShopFragment"
         tools:layout="@layout/manage_item_layout"/>
     <fragment
-        android:id="@+id/completeShopFragment2"
+        android:id="@+id/shopDetailsFragment"
+        android:name="com.dominic.shoppinglist.ui.general.ShopDetailsFragment"
+        android:label="fragment_shop_details"
+        tools:layout="@layout/fragment_shop_details">
+        <argument android:name="shop_id" app:argType="integer"/>
+        <action
+            android:id="@+id/action_shopDetailsFragment_to_editShopFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/editShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editShopFragment"
+        android:name="com.dominic.shoppinglist.ui.manage.EditShopFragment"
+        android:label="EditShopFragment"
+        tools:layout="@layout/manage_item_layout">
+        <argument android:name="shop_id" app:argType="integer"/>
+    </fragment>
+    <fragment
+        android:id="@+id/completeShopFragment"
         android:name="com.dominic.shoppinglist.ui.home.CompleteShopFragment"
         android:label="CompleteShopFragment"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_completeShopFragment2_to_shopDetailsFragment2"
-            app:destination="@id/shopDetailsFragment2"
+            android:id="@+id/action_completeShopFragment_to_addShopFragment"
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"/>
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/addShopFragment" />
         <action
-            android:id="@+id/action_completeShopFragment2_to_addShopFragment"
-            app:destination="@id/addShopFragment"
+            android:id="@+id/action_completeShopFragment_to_shopDetailsFragment"
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left"
             app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"/>
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/shopDetailsFragment" />
     </fragment>
 </navigation>
