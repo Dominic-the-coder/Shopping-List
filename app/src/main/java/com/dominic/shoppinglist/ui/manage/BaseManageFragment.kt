@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.setFragmentResult
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.dominic.shoppinglist.R
@@ -28,11 +29,11 @@ abstract class BaseManageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        lifecycleScope.launch {
-//            viewModel.finish.collect {
-//                navigateBack()
-//            }
-//        }
+        lifecycleScope.launch {
+            viewModel.finish.collect {
+                navigateBack()
+            }
+        }
 
         // If it receives a SharedFlow emit of error, it will show a snackbar
         lifecycleScope.launch {
@@ -57,4 +58,9 @@ abstract class BaseManageFragment : Fragment() {
         snackbar.setBackgroundTint(ContextCompat.getColor(requireContext(), R.color.red)).show()
     }
 
+    fun navigateBack() {
+        setFragmentResult("manage_shop", Bundle())
+        setFragmentResult("manage_edit_shop", Bundle())
+        findNavController().popBackStack()
+    }
 }
