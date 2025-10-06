@@ -58,11 +58,10 @@
             android:background="@drawable/edit_text_bg"
             android:gravity="start|top"
             android:hint="@string/description"
-            android:maxLines="1"
-            android:minLines="1"
+            android:maxLines="2"
+            android:minLines="2"
             android:overScrollMode="always"
-            android:scrollbars="horizontal"
-            android:singleLine="true" />
+            android:scrollbars="vertical" />
 
         <TextView
             android:layout_width="match_parent"
