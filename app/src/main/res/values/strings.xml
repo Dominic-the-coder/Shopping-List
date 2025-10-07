@@ -12,21 +12,22 @@
     <string name="search">Search</string>
     <string name="cancel">Cancel</string>
     <string name="delete">Delete</string>
-    <string name="sort_order">Sort Order</string>
     <string name="ascending">Ascending</string>
     <string name="descending">Descending</string>
-    <string name="sort_by">Sort By</string>
+    <string name="sort_by">Sort by A-Z or Z-A</string>
     <string name="date">Date</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="undone">Undone</string>
     <string name="done">Done</string>
     <string name="new_lists">New Lists</string>
-    <string name="checkout_Lists">Checkout Lists</string>
+    <string name="incart_list">Incart Lists</string>
 
     <string name="description_of_list">Description of lists…</string>
     <string name="quantity_of_item">1x…</string>
 
     <string name="home_empty">You have no new Lists.</string>
+    <string name="complete_empty">You have no list in Cart</string>
     <string name="no_name">Name cannot be blank.</string>
     <string name="no_desc">Description cannot be blank.</string>
     <string name="error">An error has occurred.</string>
