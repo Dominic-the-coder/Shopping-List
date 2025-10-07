@@ -10,6 +10,7 @@ import androidx.fragment.app.setFragmentResult
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.dominic.shoppinglist.R
+import com.dominic.shoppinglist.data.utils.Constant
 import com.dominic.shoppinglist.databinding.ManageItemLayoutBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
@@ -59,8 +60,8 @@ abstract class BaseManageFragment : Fragment() {
     }
 
     fun navigateBack() {
-        setFragmentResult("manage_shop", Bundle())
-        setFragmentResult("manage_edit_shop", Bundle())
+        setFragmentResult(Constant.MANAGE_SHOP, Bundle())
+        setFragmentResult(Constant.MANAGE_EDIT_SHOP, Bundle())
         findNavController().popBackStack()
     }
 }
