@@ -10,8 +10,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dominic.shoppinglist.data.enums.SortBy
 import com.dominic.shoppinglist.databinding.FragmentHomeBinding
 import com.dominic.shoppinglist.ui.adapter.ShopsAdapter
+import com.dominic.shoppinglist.ui.sort.SortDialogFragment
 import kotlinx.coroutines.launch
 
 abstract class BaseHomeFragment : Fragment() {
@@ -19,6 +21,7 @@ abstract class BaseHomeFragment : Fragment() {
     protected lateinit var binding: FragmentHomeBinding
     protected lateinit var adapter: ShopsAdapter
     protected abstract val viewModel: BaseHomeViewModel
+    protected var currentOrder = SortBy.AZ
 
 
     override fun onCreateView(
@@ -32,6 +35,7 @@ abstract class BaseHomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupAdapter()
+        setNavigation()
 
         lifecycleScope.launch {
             viewModel.shops.collect {
@@ -63,4 +67,18 @@ abstract class BaseHomeFragment : Fragment() {
     }
 
     protected abstract fun getShopDetailAction(shopId: Int): NavDirections
+
+    fun setSort(sortBy: SortBy) {
+        currentOrder = sortBy
+        viewModel.setSorting(sortBy)
+    }
+
+    fun setNavigation() {
+        binding.ivSort.setOnClickListener {
+            val dialog = SortDialogFragment(currentOrder) { sortBy ->
+                setSort(sortBy)
+            }
+            dialog.show(parentFragmentManager, "SortingDialog")
+        }
+    }
 }
