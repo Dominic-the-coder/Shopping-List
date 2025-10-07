@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginHorizontal="@dimen/xxs"
-                android:src="@drawable/ic_filter" />
+                android:src="@drawable/ic_sort" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
