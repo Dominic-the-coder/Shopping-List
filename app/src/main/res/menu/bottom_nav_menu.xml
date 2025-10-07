@@ -3,7 +3,7 @@
     <item android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
         android:title="@string/new_lists"/>
-    <item android:id="@+id/completeWordFragment"
+    <item android:id="@+id/completeShopFragment"
         android:icon="@drawable/ic_checkout"
-        android:title="@string/checkout_Lists" />
+        android:title="@string/incart_list" />
 </menu>
