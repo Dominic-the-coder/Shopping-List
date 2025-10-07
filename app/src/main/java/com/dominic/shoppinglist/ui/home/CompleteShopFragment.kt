@@ -1,19 +1,27 @@
 package com.dominic.shoppinglist.ui.home
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import com.dominic.shoppinglist.R
 
-class CompleteShopFragment : Fragment() {
+class CompleteShopFragment : BaseHomeFragment() {
 
-    companion object {
-        fun newInstance() = CompleteShopFragment()
+    override val viewModel: CompleteShopViewModel by viewModels()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.fabAdd.setOnClickListener {
+            val action = CompleteShopFragmentDirections.actionCompleteShopFragmentToAddShopFragment()
+            findNavController().navigate(action)
+        }
+        binding.tvEmpty.text = getString(R.string.complete_empty)
     }
 
-    private val viewModel: CompleteShopViewModel by viewModels()
+    override fun getShopDetailAction(shopId: Int): NavDirections {
+        return CompleteShopFragmentDirections.actionCompleteShopFragmentToShopDetailsFragment(shopId)
+    }
 
 }
