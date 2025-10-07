@@ -20,6 +20,7 @@ import com.dominic.shoppinglist.databinding.FragmentShopDetailsBinding
 import com.google.android.material.button.MaterialButton
 import com.dominic.shoppinglist.R
 import com.dominic.shoppinglist.data.enums.Status
+import com.dominic.shoppinglist.data.utils.Constant
 
 class ShopDetailsFragment : Fragment() {
 
@@ -40,9 +41,7 @@ class ShopDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         shop = viewModel.getShop(args.shopId)
         setData(shop)
-        setFragmentResultListener("manage_shop") { _, _->
-            getShop()
-        }
+        setFragmentResultListener(Constant.MANAGE_EDIT_SHOP, { _, _ -> getShop() })
     }
 
     fun setData(shop: Shop?) {
