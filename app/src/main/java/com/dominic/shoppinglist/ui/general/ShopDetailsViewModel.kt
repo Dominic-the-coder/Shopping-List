@@ -1,6 +1,7 @@
 package com.dominic.shoppinglist.ui.general
 
 import androidx.lifecycle.ViewModel
+import com.dominic.shoppinglist.data.enums.Status
 import com.dominic.shoppinglist.data.model.Shop
 import com.dominic.shoppinglist.data.repo.ShopsRepo
 import java.lang.Exception
@@ -15,6 +16,14 @@ class ShopDetailsViewModel(
             shop = it
         }
         return this.shop ?: throw Exception("Shop doesn't exist")
+    }
+
+    fun changeStatus(shop: Shop) {
+        val newStatus = when (shop.status) {
+            Status.INCART -> Status.NOTINCART
+            Status.NOTINCART -> Status.INCART
+        }
+        repo.updateShop(shop.id!!, shop.copy(status = newStatus))
     }
 
     fun deleteShop(shopId: Int) {
