@@ -34,7 +34,7 @@ abstract class BaseHomeViewModel(
     fun List<Shop>.applySort(sortBy: SortBy): List<Shop> {
         return when (sortBy) {
             SortBy.AZ -> this.sortedBy { it.name.lowercase() }
-            SortBy.ZA -> this.sortedBy { it.name.lowercase() }
+            SortBy.ZA -> this.sortedByDescending { it.name.lowercase() }
         }
     }
 }

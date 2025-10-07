@@ -11,6 +11,7 @@ import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dominic.shoppinglist.data.enums.SortBy
+import com.dominic.shoppinglist.data.utils.Constant
 import com.dominic.shoppinglist.databinding.FragmentHomeBinding
 import com.dominic.shoppinglist.ui.adapter.ShopsAdapter
 import com.dominic.shoppinglist.ui.sort.SortDialogFragment
@@ -44,9 +45,7 @@ abstract class BaseHomeFragment : Fragment() {
             }
         }
 
-        setFragmentResultListener("manage_shop") { _, _->
-            viewModel.refresh()
-        }
+        setFragmentResultListener(Constant.MANAGE_SHOP) { _, _ -> viewModel.refresh() }
     }
 
     fun setupAdapter() {
@@ -78,7 +77,7 @@ abstract class BaseHomeFragment : Fragment() {
             val dialog = SortDialogFragment(currentOrder) { sortBy ->
                 setSort(sortBy)
             }
-            dialog.show(parentFragmentManager, "SortingDialog")
+            dialog.show(parentFragmentManager, Constant.SORTING_DIALOG)
         }
     }
 }
