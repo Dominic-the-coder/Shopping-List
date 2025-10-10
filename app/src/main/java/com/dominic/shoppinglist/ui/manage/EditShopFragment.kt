@@ -6,7 +6,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.dominic.shoppinglist.R
 import com.dominic.shoppinglist.data.model.Shop
-import com.dominic.shoppinglist.ui.general.ShopDetailsFragmentArgs
+import com.dominic.shoppinglist.ui.detail.ShopDetailsFragmentArgs
 
 class EditShopFragment : BaseManageFragment() {
 
