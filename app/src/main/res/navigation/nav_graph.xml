@@ -32,7 +32,7 @@
         tools:layout="@layout/manage_item_layout"/>
     <fragment
         android:id="@+id/shopDetailsFragment"
-        android:name="com.dominic.shoppinglist.ui.general.ShopDetailsFragment"
+        android:name="com.dominic.shoppinglist.ui.detail.ShopDetailsFragment"
         android:label="fragment_shop_details"
         tools:layout="@layout/fragment_shop_details">
         <argument android:name="shop_id" app:argType="integer"/>
