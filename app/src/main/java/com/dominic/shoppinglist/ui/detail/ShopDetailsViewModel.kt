@@ -1,4 +1,4 @@
-package com.dominic.shoppinglist.ui.general
+package com.dominic.shoppinglist.ui.detail
 
 import androidx.lifecycle.ViewModel
 import com.dominic.shoppinglist.data.enums.Status

@@ -1,4 +1,4 @@
-package com.dominic.shoppinglist.ui.general
+package com.dominic.shoppinglist.ui.detail
 
 import android.app.Dialog
 import android.graphics.Color
