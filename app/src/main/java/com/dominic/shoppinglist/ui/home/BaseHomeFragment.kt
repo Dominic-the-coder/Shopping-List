@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.setFragmentResultListener
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavDirections
@@ -36,6 +37,7 @@ abstract class BaseHomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupAdapter()
+        setTextListener()
         setNavigation()
 
         lifecycleScope.launch {
@@ -70,6 +72,12 @@ abstract class BaseHomeFragment : Fragment() {
     fun setSort(sortBy: SortBy) {
         currentOrder = sortBy
         viewModel.setSorting(sortBy)
+    }
+
+    fun setTextListener() {
+        binding.etSearch.doOnTextChanged { text, _, _, _ ->
+            viewModel.setSearch(text.toString())
+        }
     }
 
     fun setNavigation() {
