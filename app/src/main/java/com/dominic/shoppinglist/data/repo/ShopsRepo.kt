@@ -1,5 +1,6 @@
 package com.dominic.shoppinglist.data.repo
 
+import com.dominic.shoppinglist.data.enums.Status
 import com.dominic.shoppinglist.data.model.Shop
 
 class ShopsRepo private constructor(){
@@ -28,12 +29,18 @@ class ShopsRepo private constructor(){
     fun updateShop(id: Int, shop: Shop) {
         map[id] = shop
     }
+    fun clearCompletedShops() {
+        val toRemove = map.filterValues { it.status == Status.INCART }.keys
+        toRemove.forEach { map.remove(it) }
+    }
+
 
     fun generateRandomList(n: Int) {
         repeat(n) {
             val shop = Shop(
                 name = "Name $it",
-                desc = " Description $it"
+                notes = " Note $it",
+                category = "Category $it"
             )
             add(shop)
         }
