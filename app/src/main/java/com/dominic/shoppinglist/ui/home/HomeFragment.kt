@@ -21,6 +21,7 @@ class HomeFragment : BaseHomeFragment() {
             val action = HomeFragmentDirections.actionHomeFragmentToAddShopFragment()
             findNavController().navigate(action)
         }
+        binding.mbClear.visibility = View.GONE
         binding.tvEmpty.text = getString(R.string.home_empty)
     }
 
