@@ -17,7 +17,8 @@ class AddShopFragment : BaseManageFragment() {
                 viewModel.submit(
                     Shop(
                         name = etName.text.toString(),
-                        desc = etDesc.text.toString(),
+                        notes = etNote.text.toString(),
+                        category = etCategory.text.toString(),
                         quantity = etQuantity.text.toString().toIntOrNull() ?: 0
                     )
                 )

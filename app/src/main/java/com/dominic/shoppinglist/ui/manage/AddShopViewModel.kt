@@ -9,7 +9,7 @@ class AddShopViewModel : BaseManageViewModel() {
     override fun submit(shop: Shop) {
         try {
             require(shop.name.isNotBlank()) { "NO_NAME" }
-            require(shop.desc.isNotBlank()) { "NO_DESCRIPTION" }
+            require(shop.notes.isNotBlank()) { "NO_NOTES" }
 
             repo.add(shop)
 
