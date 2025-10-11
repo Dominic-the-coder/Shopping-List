@@ -48,7 +48,8 @@ class ShopDetailsFragment : Fragment() {
         binding.run {
             mtDetails.setNavigationOnClickListener { findNavController().popBackStack() }
             tvName.text = shop?.name
-            tvDesc.text = shop?.desc
+            tvNote.text = shop?.notes
+            tvCategory.text = shop?.category
             tvQuantity.text = shop?.quantity?.toString() ?: "0"
 
         }
@@ -83,7 +84,7 @@ class ShopDetailsFragment : Fragment() {
     fun setStatus() {
         viewModel.changeStatus(shop)
         getShop()
-        setFragmentResult("manage_shop", Bundle())
+        setFragmentResult(Constant.MANAGE_SHOP, Bundle())
     }
 
     fun createCompletedDialog(): Dialog {
@@ -115,7 +116,7 @@ class ShopDetailsFragment : Fragment() {
             findViewById<MaterialButton>(R.id.mbCancel).setOnClickListener { dismiss() }
             findViewById<MaterialButton>(R.id.mbConfirm).setOnClickListener {
                 viewModel.deleteShop(wordId)
-                setFragmentResult("manage_shop", Bundle())
+                setFragmentResult(Constant.MANAGE_SHOP, Bundle())
                 findNavController().popBackStack()
                 dismiss()
             }
