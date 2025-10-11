@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.general.ShopDetailsFragment">
+    tools:context=".ui.detail.ShopDetailsFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/mtDetails"
@@ -83,15 +83,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/xxxs"
-                android:hint="@string/description" />
+                android:hint="@string/notes" />
 
             <TextView
-                android:id="@+id/tvDesc"
+                android:id="@+id/tvNote"
                 style="@style/TextAppearance.Material3.BodyMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/xl"
-                android:hint="@string/description_of_list" />
+                android:hint="@string/note_of_list" />
+
+            <TextView
+                style="@style/TextAppearance.Material3.TitleMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxxs"
+                android:hint="@string/category"/>
+
+            <TextView
+                android:id="@+id/tvCategory"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xl"
+                android:hint="@string/category"/>
 
             <TextView
                 style="@style/TextAppearance.Material3.TitleMedium"
