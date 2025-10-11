@@ -39,6 +39,14 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginHorizontal="@dimen/xxs"
                 android:src="@drawable/ic_sort" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:backgroundTint="@color/red"
+                android:text="@string/clear"/>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
