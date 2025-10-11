@@ -41,7 +41,7 @@ abstract class BaseManageFragment : Fragment() {
             viewModel.error.collect {
                 val message = when (it) {
                     "NO_NAME" -> getString(R.string.no_name)
-                    "NO_DESCRIPTION" -> getString(R.string.no_desc)
+                    "NO_NOTES" -> getString(R.string.no_note)
                     else -> getString(R.string.error)
                 }
                 showError(message)
