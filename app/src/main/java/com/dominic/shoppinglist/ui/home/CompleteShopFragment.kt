@@ -15,10 +15,10 @@ class CompleteShopFragment : BaseHomeFragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.fabAdd.visibility = View.GONE
 
-        binding.mbClear.setOnClickListener {
+        binding.fabClear.setOnClickListener {
             viewModel.clearCompleted()
         }
-        binding.mbClear.visibility = View.VISIBLE
+        binding.fabClear.visibility = View.VISIBLE
         binding.tvEmpty.text = getString(R.string.complete_empty)
     }
 
