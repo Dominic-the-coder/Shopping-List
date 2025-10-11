@@ -39,14 +39,6 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginHorizontal="@dimen/xxs"
                 android:src="@drawable/ic_sort" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/mbClear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:backgroundTint="@color/red"
-                android:text="@string/clear"/>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -92,5 +84,19 @@
         android:text="@string/add_list"
         app:iconTint="@color/white"
         app:icon="@drawable/ic_add" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/xl"
+        android:layout_marginBottom="@dimen/xl"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"
+        android:text="@string/clear"
+        app:iconTint="@color/white"
+        app:icon="@drawable/ic_clear"
+        android:visibility="gone"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
