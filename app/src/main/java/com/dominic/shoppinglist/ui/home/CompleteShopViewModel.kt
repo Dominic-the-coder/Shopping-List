@@ -8,10 +8,18 @@ class CompleteShopViewModel : BaseHomeViewModel() {
     init {
         getShops()
     }
+
     override fun getShops() {
         _shops.update {
-            repo.getShops().filter { it.status == Status.INCART }
-                .filter { currentSearch.isBlank() || it.name.contains(currentSearch, ignoreCase = true) }.applySort(currentOrder)
+            repo.getShops()
+                .filter { it.status == Status.INCART }
+                .filter { currentSearch.isBlank() || it.name.contains(currentSearch, ignoreCase = true) }
+                .applySort(currentOrder)
         }
+    }
+
+    fun clearCompleted() {
+        repo.clearCompletedShops()
+        getShops()
     }
 }
