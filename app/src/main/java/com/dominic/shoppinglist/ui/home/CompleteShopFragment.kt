@@ -13,10 +13,12 @@ class CompleteShopFragment : BaseHomeFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.fabAdd.setOnClickListener {
-            val action = CompleteShopFragmentDirections.actionCompleteShopFragmentToAddShopFragment()
-            findNavController().navigate(action)
+        binding.fabAdd.visibility = View.GONE
+
+        binding.mbClear.setOnClickListener {
+            viewModel.clearCompleted()
         }
+        binding.mbClear.visibility = View.VISIBLE
         binding.tvEmpty.text = getString(R.string.complete_empty)
     }
 
