@@ -22,8 +22,7 @@ class ShopsAdapter(
 
         holder.binding.run {
             tvName.text = shop.name
-            tvDesc.text = shop.desc
-
+            tvNote.text = shop.notes
             cvShop.setOnClickListener {
                 onPress(shop)
             }
