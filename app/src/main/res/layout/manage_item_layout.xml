@@ -48,20 +48,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/xl"
-            android:text="@string/description" />
+            android:text="@string/notes" />
 
         <EditText
-            android:id="@+id/etDesc"
+            android:id="@+id/etNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/xl"
             android:background="@drawable/edit_text_bg"
             android:gravity="start|top"
-            android:hint="@string/description"
+            android:hint="@string/notes"
             android:maxLines="2"
             android:minLines="2"
             android:overScrollMode="always"
             android:scrollbars="vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xl"
+            android:text="@string/category" />
+
+        <EditText
+            android:id="@+id/etCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xl"
+            android:background="@drawable/edit_text_bg"
+            android:gravity="start|top"
+            android:hint="@string/category"
+            android:maxLines="1"
+            android:minLines="1"
+            android:overScrollMode="always"
+            android:scrollbars="horizontal"
+            android:singleLine="true" />
 
         <TextView
             android:layout_width="match_parent"
