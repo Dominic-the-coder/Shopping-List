@@ -24,7 +24,7 @@ class EditShopFragment : BaseManageFragment() {
                 viewModel.submit(
                     shop.copy(
                         name = etName.text.toString(),
-                        desc = etDesc.text.toString(),
+                        notes = etNote.text.toString(),
                         quantity = etQuantity.text.toString().toIntOrNull() ?: 0
                     )
                 )
@@ -37,7 +37,7 @@ class EditShopFragment : BaseManageFragment() {
             mbSubmit.text = getString(R.string.update)
             mtManage.title = getString(R.string.update_list)
             etName.setText(shop?.name)
-            etDesc.setText(shop?.desc)
+            etNote.setText(shop?.notes)
             etQuantity.setText(shop?.quantity?.toString() ?: "0")
         }
     }

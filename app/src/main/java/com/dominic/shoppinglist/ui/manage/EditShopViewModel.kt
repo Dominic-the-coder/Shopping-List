@@ -7,7 +7,6 @@ import kotlinx.coroutines.launch
 class EditShopViewModel : BaseManageViewModel() {
     private var shop: Shop? = null
 
-    // Gets shop to populate the EditShop's EditText fields
     fun getShop(id: Int): Shop {
         repo.getShopsById(id)?.let {
             shop = it
@@ -19,14 +18,14 @@ class EditShopViewModel : BaseManageViewModel() {
     override fun submit(newShop: Shop) {
         try {
             require(newShop.name.isNotBlank()) { "NO_NAME" }
-            require(newShop.desc.isNotBlank()) { "NO_DESCRIPTION" }
+            require(newShop.notes.isNotBlank()) { "NO_DESCRIPTION" }
 
             shop?.let {
                 repo.updateShop(
                     it.id!!,
                     it.copy(
                         name = newShop.name,
-                        desc = newShop.desc,
+                        notes = newShop.notes,
                         quantity = newShop.quantity
                     )
                 )
